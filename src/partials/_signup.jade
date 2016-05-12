@@ -1,0 +1,33 @@
+// Signup Section
+section.signup
+		.row.flex-center
+			.signup-container
+				.row
+					.medium-12.column
+						h4 Sign up to receive free updates as soon as they hit!
+
+				.row.signup__user-info
+					.small-12.medium-4.large-3.column
+						.signup__input-container
+							input.signup__user-info__input(type="text" placeholder="Your Name")
+							img.signup__user-info__img(src="/assets/img/user-icon.png", alt="")
+
+					.small-12.medium-4.large-3.column
+						.signup__input-container
+							input.signup__user-info__input(type="text" placeholder="Email Adress")
+							img.signup__user-info__img(src="/assets/img/plain-icon.png", alt="")
+
+					.small-12.medium-4.large-3.column
+						.signup__input-container
+							input.signup__user-info__input(type="password" placeholder="Enter a Password")
+							img.signup__user-info__img(src="/assets/img/lock-icon.png", alt="")
+
+					.small-12.medium-12.large-3.column
+						a.button.btn-signup(href="#") Sign Up For Free!
+
+				.row
+					.medium-12.column.signup__input-agreement
+						.signup__input-agreement__checkbox
+							input(type="checkbox" id="checkbox")
+							label(for="checkbox")
+						span I agree to Land.io's termsn of service

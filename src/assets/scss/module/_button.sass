@@ -1,0 +1,74 @@
+/*=======================================================================*/
+/* Buttons                                                               */
+/*=======================================================================*/
+
+
+.button
+	border-radius: 40px
+	transition: all 0.3s
+
+.btn-landing
+	@extend .button
+	background-color: rgba(0,0,0,0)
+	border: solid 2px $primary-color
+	color: $secondary-font-color
+	position: relative
+	z-index: 0
+	overflow: hidden
+
+	&:hover
+		background-color: transparent
+
+	&:hover:after
+		opacity: 1
+
+	&:after
+		content: ''
+		display: block
+		height: 217px
+		width: 217px
+		background: linear-gradient(45deg, rgb(82, 159, 229), rgb(110, 81, 175))
+		border-radius: 50%
+		position: absolute
+		top: -209%
+		left: -11%
+		z-index: -1
+		opacity: 0
+		transition: opacity 1s
+		animation: btn-swirl 4s linear infinite
+
+
+.btn-sub
+	@extend .button
+	background-color: rgba(0,0,0,0)
+	padding: 13px 37px
+	margin: 13px 0 31px
+	border: solid 1px $accent-color
+	color: $accent-font-color
+
+	&:hover
+		background-color: $accent-color
+		color: white
+		animation: btn-resize 0.3s ease-in-out
+
+.btn-signup
+	@extend .btn-sub
+	margin: 0
+	padding-top: 11px
+
+
+
+// Animations
+//------------
+
+@keyframes btn-resize
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.1)
+	100%
+		transform: scale(1)
+
+@keyframes btn-swirl
+	to
+		transform: rotate(1turn)

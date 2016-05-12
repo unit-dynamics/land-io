@@ -1,0 +1,84 @@
+/*=======================================================================*/
+/* Subscription                                                          */
+/*=======================================================================*/
+
+
+.sub
+	text-align: center
+	color: $primary-font-color
+	margin: 5rem
+	
+	&__header
+		margin-bottom: 40px
+
+	&__card-personal
+		border-radius: 4px 0px 0px 4px 
+
+	&__card-professional
+		padding-bottom: 15px
+		border-radius: 4px
+
+	&__card-enterprise
+		border-radius: 0px 4px 4px 0px 
+
+	&__card
+		border: solid 2px $tertiary-color
+		transition: all 0.3s
+
+		&:hover, &.card-is-active
+			border: solid 2px $accent-color
+		&:hover &__header, &.card-is-active &__header
+			background-color: $accent-color
+			color: $secondary-font-color
+		&:hover .btn-sub, &.card-is-active .btn-sub
+			background-color: $accent-color
+			color: $secondary-font-color
+
+		&__header
+			width: 100%
+			padding: 13px 0
+			margin-bottom: 20px
+			background-color: $tertiary-color
+			transition: all 0.3s
+
+		&__features
+			list-style-type: none
+			margin: 1rem 2rem
+
+			li
+				line-height: 2
+				border-bottom: solid 1px $tertiary-color
+			
+			.price-entry
+				margin-bottom: 15px
+				line-height: 1
+
+			.price
+				font-size: 3rem
+				font-weight: 600
+				position: relative
+
+				&:before
+					content: '$'
+					font-size: 0.5em
+					position: absolute
+					top: 10%
+					left: -15px
+				
+			.month
+				font-weight: 300
+		
+		&__info
+			margin: 0 auto
+			line-height: 2
+
+
+// Media Queries
+//-------------
+
+@include breakpoint(small down)
+	.sub
+		margin: 2rem
+
+	.sub__card
+		margin-bottom: 10px

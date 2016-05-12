@@ -1,0 +1,54 @@
+/*=======================================================================*/
+/* Landing                                                             */
+/*=======================================================================*/
+
+.landing
+	// display: flex
+	// flex-wrap: wrap
+	width: 99vw
+	height: 100vh
+	background-image: url("assets/img/hero-bg.png")
+	background-position: 50% 50%
+	background-size: cover
+	color: $secondary-font-color
+	text-align: center
+
+	&__cta
+		align-self: flex-end
+
+		h1
+			calc(98% + 4vw)
+
+		p
+			font-size: 26px
+			font-size: calc(66% + 1vw)
+
+	&__button
+		margin-top: 50px
+
+		img
+			padding-right: 13px
+			
+
+
+	&__social
+		align-self: flex-end
+
+		li
+			display: inline-block
+			list-style-type: none
+			padding: 0 16px
+			border-right: 1px solid $primary-color
+			&:last-child
+				border: none
+
+		img
+			padding-right: 7px
+
+	&__nav
+		width: 100%
+		position: absolute
+		top: 3%
+		left: 0
+
+

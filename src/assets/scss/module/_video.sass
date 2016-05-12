@@ -1,0 +1,35 @@
+/*=======================================================================*/
+/* Video                                                                 */
+/*=======================================================================*/
+
+
+.video-container
+	height: 35rem
+	overflow: hidden
+	
+.video
+	height: 100%
+	background-image: url("/assets/img/Video-bg.png")
+	background-position: 50% 50%
+	background-size: cover
+	transition: all 1s
+	
+
+	&:hover
+		// transform: scale(1.1)
+
+
+video
+	cursor: pointer
+	width: 100%
+	position: relative
+	// top: -37%
+	top: -12rem
+	opacity: 0
+	transition: opacity 1s
+
+
+@media (max-width: 660px)
+	video
+		display: none
+		top: 0

@@ -1,0 +1,103 @@
+/*=======================================================================*/
+/* SignUp                                                                */
+/*=======================================================================*/
+
+
+.signup-container
+	margin: 2rem
+
+.signup
+	height: 23rem
+	background-color: $tertiary-color
+	color: $primary-font-color
+	text-align: center
+	padding-bottom: 15px
+
+	&__input-container
+		text-align: left
+		position: relative
+
+
+	&__user-info
+		margin-top: 2rem
+
+
+		&__input
+			padding-left: 53px
+			border-radius: 4px
+
+			&:focus
+				border: solid 1px $accent-color
+				color: rgba(66, 71, 83, 0.8)
+
+		&__img
+			border-right: solid 1px lightgrey
+			padding-right: 14px
+			position: absolute
+			top: 10px
+			left: 7px
+			
+			.signup__user-info :nth-child(3) &
+				left: 13px
+
+
+	&__input-agreement
+		color: fade-out($primary-font-color, 0.3)
+		text-align: left
+
+		&__checkbox
+			width: 20px
+			height: 20px
+			position: relative
+			display: inline-block
+			margin-right: 10px
+			
+			&:hover label:after
+				opacity: 0.3
+
+			input:checked + label:after
+				opacity: 1
+				margin: 0
+
+			input
+				visibility: hidden
+
+			label
+				cursor: pointer
+				margin: 0
+				width: 20px
+				height: 20px
+				position: absolute
+				top: 3px
+				left: -1px
+				background: $primary-color
+				border: 1px solid #E0E0E5
+
+				&:after
+					opacity: 0
+					content: ''
+					position: absolute
+					width: 9px
+					height: 5px
+					background: transparent
+					top: 6px
+					left: 5px
+					border: 3px solid #929191
+					border-top: none
+					border-right: none
+					transition: all 0.3s
+					transform: rotate(-45deg)
+
+
+// Media Queries
+//-------------
+
+@include breakpoint(medium down)
+
+	.signup__input-agreement
+		text-align: center
+		margin-top: 10px
+
+	.signup-container
+		margin: 1rem
+

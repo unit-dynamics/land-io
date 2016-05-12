@@ -1,0 +1,64 @@
+// Nav Section
+section.nav
+
+	// Main Nav
+	nav.nav-container
+		.row
+
+			// Left Side - Logo Section
+			//================================
+			.small-2.columns.nav__left-side
+				img(src="/assets/img/logo.png", alt="")
+			
+			// Right Side
+			//=============
+			.small-10.columns.nav__right-side
+
+				// Menu Section
+				.nav__menu
+					ul.menu
+						li: a(href="#") About Land.io
+						li: a(href="#")  How It Works
+						li: a(href="#")  Support
+						li: a(href="#")  Login In
+
+				
+				// Mobile Menu Button
+				.nav__menu-mobile-btn
+					span
+
+				// Search Section
+				.nav__search
+					input.nav__search__input(type="text" placeholder="Type to start searching")
+					img.nav__search__icon(src="/assets/img/search-icon.png", alt="")
+
+				// User Section
+				.nav__user-container
+					.nav__user-avatar
+						img(src="/assets/img/avatar.png", alt="")
+						img.nav__user-avatar__arrow(src="/assets/img/down-icon.png", alt="")
+
+					// Portfolio Dropdown Box
+					//================================
+					.nav__profile-box(tabindex="0")
+
+						// Portfolio Dropdown Box - User Info
+						.row.nav__profile-box__user-info
+							.small-12.medium-4.column.user-info__picture
+								img(src="/assets/img/person-5.png", alt="")
+							.small-12.medium-6.column.collapse.user-info__info
+								span: b Peter Finland
+								p hey@peterfinlan.com
+
+						// Portfolio Dropdown Box - User Options
+						.row.nav__profile-box__user-options
+							.medium-12.column
+								ul
+									li: a.a-user-options(href="") View Post
+									li: a.a-user-options(href="") Manage Groups
+									li: a.a-user-options(href="") Subscription & Billing
+									li: a.a-user-options(href="") LOG OUT
+
+							// Portfolio Dropdown Box - Settings Button
+							.nav__profile-box__edit-icon
+								a(href=""): img(src="/assets/img/profile-edit-icon.png", alt="")

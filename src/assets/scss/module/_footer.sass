@@ -1,0 +1,53 @@
+/*=======================================================================*/
+/* Footer                                                                */
+/*=======================================================================*/
+
+
+// Footer Section
+.footer
+	height: 12rem
+	background-color: $secondary-color
+	color: $secondary-font-color
+	
+	&__credits
+		p
+			display: inline-block
+			font-size: 13px
+
+		img
+			vertical-align: top
+			margin-right: 2%
+
+	&__menu
+
+		a:hover
+			border-bottom: solid 2px rgba(255, 255, 255, 0.2)
+
+		img
+			padding-left: 5px
+
+		&__back-to-top
+				&:hover img
+					animation: bounce-up 0.8s 8 ease-in-out
+
+
+
+@keyframes bounce-up
+	0%
+		transform: translate(0, 0)
+	50%
+		transform: translate(0, -6px)
+	100%
+		transform: translate(0, 0)
+
+
+// Media Queries
+//-------------
+@include breakpoint(small down)
+	.footer
+		text-align: center
+		padding: 1.1rem
+		height: 100%
+
+		.menu li
+			display: block

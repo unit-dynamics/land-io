@@ -1,0 +1,79 @@
+/*=======================================================================*/
+/* Testimonial                                                           */
+/*=======================================================================*/
+
+
+.test-container
+	height: 32rem
+	background-image: url("/assets/img/keyboard-bg.png")
+	background-position: 50% 50%
+	background-size: cover
+
+.test
+	color: $secondary-font-color
+	text-align: center
+	position: relative
+
+	&__card-container
+		position: relative
+		overflow: hidden
+		height: 20rem
+		margin-top: 3rem
+
+	&__card
+		width: 100%
+		margin: 0 auto
+		position: absolute
+		opacity: 0
+		transform: translate(0px, 50px) scale(1.2)
+		transition: all ease-in-out 500ms
+
+		&.card-is-active
+			opacity: 1
+			transform: translate(0px, 0px) scale(1)
+
+		&__user-img
+			margin: 2% 0
+
+
+		&__user-quote
+			width: 80%
+			margin: 0 auto
+			font-size: 28px
+
+		&__user-name
+			span
+				display: inline-block
+
+			span:after
+				content: ''
+				display: block
+				height: 1px
+				width: 40%
+				opacity: 0.3
+				margin: 0 auto
+				position: relative
+				bottom: 0
+				background-color: $primary-color
+
+	&__users
+
+		.user-img
+			opacity: 0.5
+			height: 35px
+			margin: 0 5px
+			transition: all 500ms
+			cursor: pointer
+
+			&:hover
+				opacity: 0.8
+
+			&.img-is-active
+				opacity: 1
+				height: 51px
+
+// Media Queries
+//-------------
+@include breakpoint(small down)
+	.test__card__user-quote
+		font-size: 1.2em
